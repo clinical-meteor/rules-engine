@@ -1,13 +1,12 @@
-# clinical:conversational-ui
+# clinical:rules-engine
 
-Conversational UI - questionnaires, decision trees, voice recognition, etc.
-
+Rules engines for clinical workflows.
 
 #### Clone the Example Plugin      
 
 ```bash
 cd webapp/packages
-git clone https://github.com/clinical-meteor/conversational-ui
+git clone https://github.com/clinical-meteor/rules-engine
 ```
 
 
@@ -15,10 +14,7 @@ git clone https://github.com/clinical-meteor/conversational-ui
 
 ```bash
 # add your package
-meteor add clinical:conversational-ui
+meteor add clinical:rules-engine
 meteor npm install
-
-# run with a custom settings file
-meteor --settings packages/conversational-ui/configs/settings.example.json
 ```
 
