@@ -35,15 +35,15 @@ let engine = new Engine()
 engine.addRule({
   conditions: {
     any: [{
-      all: [Goals.find().map(function(goal){
+      all: [Goals.find({'code.text': 'BMI'}).map(function(goal){
           return {
-            fact: 'weightLoss',
-            operator: 'greaterThan',
-            value: 20
+            fact: 'BMI',
+            operator: 'lessThan',
+            value: 24
           }
       })]
     }, {
-      all: [Goals.find().map(function(goal){
+      all: [Goals.find({'code.text': 'Weight'}).map(function(goal){
           return {
             fact: 'currentWeight',
             operator: 'lessThan',
@@ -67,7 +67,8 @@ engine.addRule({
  */
 
 let facts = {
-  currentWeight: get(Observations.find({'code.text': 'Weight'}).fetch()[0], 'valueQuantity.value')
+  currentWeight: get(Observations.find({'code.text': 'Weight'}).fetch()[0], 'valueQuantity.value'),
+  bodyMassIndex: get(Observations.find({'code.text': 'BMI'}).fetch()[0], 'valueQuantity.value')
 }
  
 // Run the engine to evaluate
