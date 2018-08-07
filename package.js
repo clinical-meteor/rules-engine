@@ -1,6 +1,6 @@
 Package.describe({
     name: 'clinical:rules-engine',
-    version: '0.0.2',
+    version: '0.0.3',
     summary: 'Rules engines for clinical workflows',
     git: 'https://github.com/clinical-meteor/rules-engine',
     documentation: 'README.md'
